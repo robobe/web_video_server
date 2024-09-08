@@ -81,4 +81,8 @@ install(DIRECTORY include/${PROJECT_NAME}/
    FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp"
 )
 
+if(DEFINED OUTPUT_FOLDER)
+  include(Packing)
+endif()
+
 ament_package()
